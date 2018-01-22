@@ -9,6 +9,15 @@ namespace RimWorld
         public static StatDef SexMaturityAgeMin;
 
         public static StatDef SexMaturityAgeMax;
-        
+
+        public static StatDef HelplessInfantDays;
+
+        public static StatDef AlienToddlerDays ;
+
+        public static StatDef AmountofAlienMilk;
+
+        public static StatDef LactatingFrequency;
+
+
     }
 }

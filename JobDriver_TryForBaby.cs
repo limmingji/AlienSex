@@ -6,16 +6,6 @@ using Verse.AI;
 
 namespace RimWorld
 {
-
-    [DefOf]
-    public static class AlienSexHediffDefOf
-    {
-        // Token: 0x04001D46 RID: 7494
-        public static HediffDef AlienPregnant;
-        public static HediffDef AlienInfant;
-        public static HediffDef AlienGaveBirth;
-        
-    }
         // Token: 0x02000071 RID: 113
         public class JobDriver_TryForBaby : JobDriver
     {

@@ -31,13 +31,7 @@ namespace RimWorld
                 return null;
             }
             Pawn partnerInMyBed = LovePartnerRelationUtility.GetPartnerInMyBed(pawn);
-            float ageMin2 = partnerInMyBed.kindDef.race.GetStatValueAbstract(AlienSexStatDefOf.SexMaturityAgeMin);
-            float ageMax2 = partnerInMyBed.kindDef.race.GetStatValueAbstract(AlienSexStatDefOf.SexMaturityAgeMax);
-            if (partnerInMyBed.ageTracker.AgeBiologicalYearsFloat < ageMin2 || partnerInMyBed.ageTracker.AgeBiologicalYearsFloat > ageMax2)
-            {
-                Log.Message(partnerInMyBed + "is not old enough to try for baby");
-                return null;
-            }
+            
             if (partnerInMyBed == null || !partnerInMyBed.health.capacities.CanBeAwake || Find.TickManager.TicksGame < partnerInMyBed.mindState.canLovinTick)
             {
                 return null;
@@ -50,7 +44,13 @@ namespace RimWorld
             {
                 return new Job(JobDefOf.Lovin, partnerInMyBed, pawn.CurrentBed());
             }
-            
+            float ageMin2 = partnerInMyBed.kindDef.race.GetStatValueAbstract(AlienSexStatDefOf.SexMaturityAgeMin);
+            float ageMax2 = partnerInMyBed.kindDef.race.GetStatValueAbstract(AlienSexStatDefOf.SexMaturityAgeMax);
+            if (partnerInMyBed.ageTracker.AgeBiologicalYearsFloat < ageMin2 || partnerInMyBed.ageTracker.AgeBiologicalYearsFloat > ageMax2)
+            {
+                Log.Message(partnerInMyBed + "is not old enough to try for baby");
+                return null;
+            }
             if (pawn.TryGetComp<AlienSexTracker>() == null && partnerInMyBed.TryGetComp<AlienSexTracker>() == null)
             {
                 //Log.Message("Both without tracker - Pawn: " + pawn + "  Partner: " + partnerInMyBed);

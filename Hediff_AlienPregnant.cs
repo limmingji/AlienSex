@@ -115,6 +115,7 @@ namespace Verse
             mother.needs.mood.thoughts.memories.TryGainMemory(AlienSexThoughtDefOf.NewColonyBabyMother);
             father.needs.mood.thoughts.memories.TryGainMemory(AlienSexThoughtDefOf.NewColonyBabyFather);
             mother.health.AddHediff(AlienSexHediffDefOf.AlienGaveBirth);
+            mother.health.AddHediff(AlienSexHediffDefOf.AlienLactating);
             foreach (Pawn pawn2 in mother.Map.mapPawns.SpawnedPawnsInFaction(mother.Faction))
             {
                 if (pawn2 != mother && pawn2 != father && pawn2.needs.mood != null && pawn2.needs.mood.thoughts != null)

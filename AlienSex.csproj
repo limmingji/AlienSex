@@ -47,10 +47,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlienSexHediffDefOf.cs" />
     <Compile Include="AlienSexPatch.cs" />
     <Compile Include="AlienSexStatDefOf.cs" />
     <Compile Include="AlienSexThoughtDefOf.cs" />
+    <Compile Include="Hediff_AlienLactating.cs" />
     <Compile Include="Hediff_AlienPregnant.cs" />
+    <Compile Include="Hediff_AlienToddler.cs" />
+    <Compile Include="Hediff_AlienToddlerHungry.cs" />
+    <Compile Include="Hediff_AlienToddlerTired.cs" />
+    <Compile Include="Hediff_HelplessInfant.cs" />
     <Compile Include="JobDriver_TryForBaby.cs" />
     <Compile Include="JobGiver_TryForBaby.cs" />
     <Compile Include="AlienSexTracker.cs" />
